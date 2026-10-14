@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josh Davis: Creative director + operator</title>
+<meta name="description" content="Josh Davis is a blended generalist across creative direction, program operations, and technical fluency, who builds things from zero.">
+<style>
+  :root {
+    --bg:      oklch(98% 0.004 95);
+    --surface: oklch(100% 0.002 95);
+    --fg:      oklch(20% 0.018 70);
+    --muted:   oklch(48% 0.012 70);
+    --border:  oklch(90% 0.006 95);
+    --accent:  oklch(52% 0.10 28);
+    --accent-hover: oklch(42% 0.10 28);
+
+    --font-display: 'Iowan Old Style', 'Charter', Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+    --measure: 640px;
+    --gutter: clamp(20px, 5vw, 40px);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--accent); color: var(--surface); }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    padding-top: clamp(96px, 18vh, 180px);
+    padding-bottom: clamp(140px, 22vh, 240px);
+  }
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(3.25rem, 12vw, 7rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .stamp {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    vertical-align: top;
+    margin-left: 14px;
+  }
+  .lede {
+    font-size: clamp(1.15rem, 2.2vw, 1.3rem);
+    line-height: 1.5;
+    color: var(--fg);
+    margin: 40px 0 0;
+    max-width: 34ch;
+    text-wrap: balance;
+  }
+
+  /* ---------- sections ---------- */
+  .section { padding-bottom: clamp(120px, 18vh, 200px); }
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--fg);
+    margin: 0 0 36px;
+  }
+
+  /* ---------- about ---------- */
+  .about-copy {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fg);
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  /* ---------- work ---------- */
+  .work-entry {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+  }
+  .work-entry:last-child { margin-bottom: 0; }
+  .entry-name {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  .entry-meta { color: var(--muted); }
+
+  /* ---------- projects ---------- */
+  .project-entry {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0 0 32px;
+  }
+  .project-entry:last-child { margin-bottom: 0; }
+
+  /* ---------- contact ---------- */
+  .contact-email {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: color 0.15s ease;
+  }
+  .contact-email:hover { color: var(--accent-hover); }
+  .contact-email:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+    border-radius: 2px;
+  }
+
+  /* ---------- footer ---------- */
+  .site-footer {
+    padding: 0 0 64px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+  }
+  .site-footer p { margin: 0; }
+</style>
+</head>
+<body>
+
+  <main class="wrap">
+    <header class="hero" data-od-id="hero">
+      <h1 class="wordmark" data-od-id="hero-wordmark">Josh Davis<span class="stamp">v1.0</span></h1>
+      <p class="lede" data-od-id="hero-positioning">Creative director + program lead + operator focused on the arts, creatives, and frontier tech.</p>
+    </header>
+
+    <section class="section" data-od-id="about">
+      <h2 class="section-label">About</h2>
+      <p class="about-copy">I run programs, produce events, and manage teams. Most recently, I led programs at the Ethereum Foundation, running the Ethereum Protocol Fellowship and Summer of Protocols across a $5M budget. Before that, I co-produced Devconnect Amsterdam and spent seven years as Creative Director of Sonic Bloom Festival.</p>
+    </section>
+
+    <section class="section" data-od-id="work">
+      <h2 class="section-label">Work</h2>
+      <p class="work-entry" data-od-id="work-entry-ethereum"><span class="entry-name">Ethereum Foundation</span> — <span class="entry-meta">Program Lead (2022–2026)</span></p>
+      <p class="work-entry" data-od-id="work-entry-devconnect"><span class="entry-name">Devconnect Amsterdam</span> — <span class="entry-meta">Production Manager (2021–2022)</span></p>
+      <p class="work-entry" data-od-id="work-entry-sonic-bloom"><span class="entry-name">Sonic Bloom Festival</span> — <span class="entry-meta">Creative Director (2014–2021)</span></p>
+      
+      <p class="work-entry" data-od-id="work-entry-digital-empathy"><span class="entry-name">Digital Empathy Design</span> — <span class="entry-meta">Freelance Designer (2010–)</span></p>
+      
+    </section>
+
+    <section class="section" data-od-id="projects">
+      <h2 class="section-label">Selected projects</h2>
+      
+      <p class="project-entry" data-od-id="project-lms"><span class="entry-name">Moodle education platform</span> — <span class="entry-meta">built a 35-lesson, three-course learning platform from scratch at the Ethereum Foundation.</span></p>
+      <p class="project-entry" data-od-id="project-grants"><span class="entry-name">$5M grant programs</span> — <span class="entry-meta">ran the Ethereum Protocol Fellowship and administrated the Summer of Protocols, managing $1.5M annual budget.</span></p>
+      <p class="project-entry" data-od-id="project-devconnect"><span class="entry-name">$4M decentralized conference</span> — <span class="entry-meta">produced Devconnect Amsterdam: 15,000 attendees, 12–15 independently-run sub-events.</span></p>
+    </section>
+
+    <section class="section" data-od-id="contact">
+      <h2 class="section-label">Contact</h2>
+      <a class="contact-email" href="mailto:hello@joshdavis.com" data-od-id="contact-email">hello@joshdavis.com</a>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap" data-od-id="footer">
+    <p>© 2026 Josh Davis</p>
+  </footer>
+
+
+
+</body></html>
